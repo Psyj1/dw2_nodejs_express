@@ -25,7 +25,7 @@ function age(n) {
     console.log("Minus than 18 years");
   }
 }
-idade(16);
+age(16);
 
 //Função anônima 5 – Crie uma função anônima que receba duas notas como parâmetro. Se a média dessas notas for <=5, a função deve retornar o valor “Reprovado”, se não deve retornar o valor “Aprovado”.  O resultado deve ser exibido no console. Considere média = (nota1 + nota2) / 2.
 
@@ -44,17 +44,17 @@ mid(7, 6);
 const triple = x => {
   return x*3;
 }
-console.log('The result is ${triple(5)}');
+console.log(`The result is ${triple(5)}`);
 
 //Arrow function com mais de um parâmetro 7 – Crie uma arrow function que receba quatro números como parâmetro e retorne a soma entre esses números. O resultado deve ser impresso no console.
 
-const result = (n1, n2, n3, n4, operator) =>{
-  return eval('${n1} ${operator} ${n2} ${operator} ${n3} ${operator} ${n4}');
+const result = (n1, n2, n3, n4) =>{
+  return n1 + n2 + n3 + n4;
 }
-console.log ('The result of the operation is ${result(4, '+', 4, '+', 4, '+', 4)}');
+console.log (`The result of the operation is ${result(4, 4, 4, 4)}`);
 
 //IIFE 8 – Crie uma função imediata que receba o nome de uma pessoa como parâmetro e exiba no console uma saudação a essa pessoa.
 
 const iife = (function(name){
-  console.log('Hello, welcome ${name}');
+  console.log(`Hello, welcome ${name}`);
 })("Diego");
