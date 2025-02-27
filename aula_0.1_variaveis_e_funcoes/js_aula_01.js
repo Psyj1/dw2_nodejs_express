@@ -43,7 +43,7 @@ console.log(typeof myFunction);
 function saudation() {
   console.log("Hello, welcome!");
 }
-saudation();
+saudation(); 
 
 //Função com parãmetro / Argumento
 //Parâmetro -> é o que a função recebe.
