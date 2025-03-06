@@ -52,7 +52,7 @@ saudation();
 function saudation(name) {
   console.log("Hello, welcome" + name); //Concatenando
   //Usando template string ''
-  console.log("Hello, welcome ${name}");
+  console.log(`Hello, welcome ${name}`);
 
   //${} -> PlaceHolder
 }
@@ -63,7 +63,7 @@ saudation("Paul"); //Argumento
 
 function plus(n1, n2) {
   let result = n1 + n2;
-  console.log("The soma? of the two values was ${result} .");
+  console.log(`The soma? of the two values was ${result} .`);
 }
 plus(5, 5);
 
@@ -72,7 +72,7 @@ function Plus(n1, n2) {
   return n1 + n2;
 }
 
-console.log("the soma? of the two values was ${Soma(2, 6)}.");
+console.log(`the soma? of the two values was ${Soma(2, 6)}.`);
 
 //Função com mais de um retorno
 function parImpar(n) {
@@ -99,17 +99,17 @@ const Double = x => {
     return x*2
 }
 
-console.log('Function double with ERLON Function. Result: ${Double(20)}')
+console.log(`Function double with ERLON Function. Result: ${Double(20)}`)
 
 // Arrow function com mais de um parâmetro
 const calc = (num1, operator, num2) => {
-    return eval('${num1} ${operator} ${num2}')
+    return eval(`${num1} ${operator} ${num2}`)
 }
-console.log('The result of the operator is ${calc(6, '*', 6)}')
+console.log(`The result of the operator is ${calc(6, '*', 6)}`)
 
 //Simplificando arrow function
-const Calc = (num1, operator, num2) => eval('${num1} ${operator} ${num2}')
-console.log('O resultado da operação é ${Calc(7, '*', 7)}.')
+const Calc = (num1, operator, num2) => eval(`${num1} ${operator} ${num2}`)
+console.log(`O resultado da operação é ${Calc(7, '*', 7)}.`)
 
 // IIFE - Immediately Invoked Function Expression
 // Função Imediata - última \o/
@@ -119,7 +119,7 @@ const iife = (function(){
 
 //IIFE com parâmetro
 const start = (function(app){
-    console.log('Executando imediatamente o app ${app}')
+    console.log(`Executando imediatamente o app ${app}`)
 })("Whatsapp 2")
 
 
