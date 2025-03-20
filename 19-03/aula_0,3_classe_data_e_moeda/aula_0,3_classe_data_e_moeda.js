@@ -39,7 +39,7 @@ class Carro {
    
   //adicionndo um novo atributo
   carroEsportivo.corNeon = "Azul";
-  //adicionndo um novo atributo
+  //adicionndo um novo metodo
   carroEsportivo.turbo = function () {
     return "Vrummmm! O carro está acelerando!!!";
   };
