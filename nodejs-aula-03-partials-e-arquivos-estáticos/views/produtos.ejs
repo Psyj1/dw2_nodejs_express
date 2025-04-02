@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Produtos</title>
-  </head>
-  <body>
+<%- include ('partials/navbar.ejs') %> 
+<%- include ('partials/header.ejs') %>  
     <h1>Confira esse produto:</h1>
     <!-- ! = operador NOT: verifica se o valor é falso-->
     <% if (!produto){ %> 
@@ -17,5 +11,5 @@
     <% } %>
     <hr />
     <p>Faça seu pedido agora!</p>
-  </body>
-</html>
+
+<%- include ('partials/footer.ejs') %>     
