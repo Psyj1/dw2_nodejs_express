@@ -7,6 +7,9 @@ const app = express(); //Iniciando o Express
 // Configurando a view engine - EJS
 app.set("view engine", "ejs");
 
+// Configurando a pasta public para arquivos estáticos
+app.use(express.static("public"));
+
 // CRIANDO A ROTA PRINCIPAL (RAIZ) DO SITE
 //Método .get cria uma rota na aplicação
 // Req => trata a requisição
@@ -30,12 +33,12 @@ app.get("/produtos/:produto?", (req, res) => {
   const produto = req.params.produto;
 
   // Array com uma lista de produtos
-  const produtos = ['Computador', 'Celular', 'Tablet', 'Notebook']
+  const produtos = ["Computador", "Celular", "Tablet", "Notebook"];
 
   res.render("produtos", {
     // Enviando a variável produto para a página
     produto: produto,
-    produtos : produtos
+    produtos: produtos,
   });
 });
 
