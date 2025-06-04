@@ -1,0 +1,32 @@
+<%- include ('partials/header.ejs') %>
+<div class="container">
+    <h1>Register a movie:</h1>
+    <form action="/movies/new" method="POST">
+        <input type="text" name="title" placeholder="Insert a title of movie">
+        <input type="text" name="genre" placeholder="Insert the genre of movie">
+        <input type="number" name="duration" placeholder="Insert the duration of movie">
+        <input type="submit" value="Register">
+    </form>
+    <br><hr><br>
+    <table>
+        <thead>
+            <th style="width: 150px; text-align: center;">Title:</th>
+            <th style="width: 150px; text-align: center;">Genre:</th>
+            <th style="width: 150px; text-align: center;">Duration:</th>
+            <th style="width: 150px; text-align: center;">Action:</th>
+
+        </thead>
+        <tbody>
+            <% movies.forEach(movie => { %>
+            <tr style="text-align: center;">
+                <td><%= movie.title %></td>
+                <td><%= movie.genre %></td>
+                <td><%= movie.duration %></td>
+                <td><a onclick="return confirm('R u sure about that?')" href="/movies/delete/<%= movie.id%>">Delete</a></td>
+            </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</div>
+
+<%- include ('partials/footer.ejs') %>
